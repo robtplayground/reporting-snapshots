@@ -1,0 +1,19 @@
+{
+    "advertiserName" : "American Express",
+"brand": "Amex Rewards",
+"campaignName": "Travel Further June",
+"agency": "Mi9",
+"heroMetric" : "viewability",
+"metric2": "ctr",
+"metric3": "engagementRate",
+"creativeId": "mocise/8",
+"format": "Super Skin",
+"sites": ["mtv","ninemsn","gumtree" ],
+"viewability": "75",
+"ctr": "0.53",
+"timeInView": "4.56",
+"impressions": "500K",
+"clicks": "570",
+"replayRate": "50",
+"trending": [1,2,3,4,5]
+}
