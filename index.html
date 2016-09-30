@@ -21,38 +21,84 @@
                 <label for="campaignName">Campaign Name</label>
                 <input type="text" id="campaignName">
 
-                <label for="agency"></label>
-                <select name="agency" id="agency">
-                    <option value=""></option>
-                    <option value=""></option>
-                    <option value=""></option>
-                    <option value=""></option>
-                    <option value=""></option>
-                    <option value=""></option>
-                    <option value=""></option>
-                    <option value=""></option>
-                    <option value=""></option>
-                    <option value=""></option>
-                    <option value=""></option>
-                    <option value=""></option>
-                    <option value=""></option>
-                    <option value=""></option>
-                    <option value=""></option>
+                <label for="agencyLogo">Agency Logo URL</label>
+                <input type="text" name="agencyLoop">
 
-
+                <label for="heroMetric"></label>
+                <select id="heroMetric" name="heroMetric">
+                    <option value="viewability">Viewability</option>
+                    <option value="ctr">CTR</option>
+                    <option value="engagementRate">Engagement Rate</option>
+                    <option value="replayRate">Replay
+                    Rate</option>
+                    <option value="timeInView">Time in View</option>
                 </select>
 
+                <label for="metric2"></label>
+                <select id="metric2" name="metric2">
+                    <option value="viewability">Viewability</option>
+                    <option value="ctr">CTR</option>
+                    <option value="engagementRate">Engagement Rate</option>
+                    <option value="replayRate">Replay
+                    Rate</option>
+                    <option value="timeInView">Time in View</option>
+                </select>
 
+                <label for="metric3"></label>
+                <select id="metric3" name="metric3">
+                    <option value="viewability">Viewability</option>
+                    <option value="ctr">CTR</option>
+                    <option value="engagementRate">Engagement Rate</option>
+                    <option value="replayRate">Replay
+                    Rate</option>
+                    <option value="timeInView">Time in View</option>
+                </select>
 
+                <label for="creativeId">Creative ID</label>
+                <input type="text" name="creativeId">
+
+                <label for="format">Format</label>
+                <select name="format" id="format">
+                    <option value="superSkin">Super Skin</option>
+                    <option value="sidePush">Side Push</option>
+                    <option value="topAndTail">Top and Tail</option>
+                    <option value="cinema">Cinema</option>
+                    <option value="driveBy">Drive By</option>
+                    <option value="hangTime">Hang Time</option>
+                </select>
+
+                <label for="sites">Sites</label>
 
             </fieldset>
 
        </form>
 
+       <div class="container">
+            <h1 class="title">Advertiser Name &middot; Placement Name</h1>
+            <div class="phone">
+                <iframe id="phone-preview-iframe" width="375" height="667" src="https://create.playground.xyz/kosula/1/quiet?dpframe=1&amp;demo-host=mamamia"></iframe>
+            </div>
+            <div class="hero-metric"></div>
+            <div class="metric2"></div>
+            <div class="metric3"></div>
+            <div class="impressions"></div>
+            <div class="clicks"></div>
+       </div>
+
+       <div class="icon">
+           <svg viewBox="0 0 300 300">
+               <use xlink:href="img/metric-icons.svg#replay-rate" />
+           </svg>
+       </div>
+
 
       <script>
 
          $(function() {
+
+            //  load image by ajax
+
+
 
         //    $.getJSON('snapshot.json', function(jd) {
         //        console.log(jd);
