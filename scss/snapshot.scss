@@ -6,6 +6,26 @@ html, body{
     font-family: 'Ubuntu', sans-serif;
 }
 
+// Colours
+// -------------------
+
+// Useful greys
+
+$black: #222222;
+$white: #ffffff;
+
+$lightgrey: #efefef;
+$midgrey:  #cccccc;
+$darkgrey: #333333;
+
+// brand colours
+
+$pink: #e91e63;
+$sp-teal: #005558;
+$ss-blue: #0078d8;
+$tt-purple: #5d3289;
+$sc-red: #ff3333;
+
 //rems
 
 $b: 10px;
@@ -41,7 +61,7 @@ svg{
     position: relative;
     width: 100%;
     height: 100%;
-    fill:blue;
+    fill:$sp-teal;
 }
 
 form{
@@ -56,14 +76,15 @@ form{
     height: 1080px;
     position: absolute;
     margin:auto;
-    background: green;
+    background: $lightgrey;
     top:0;
     bottom:0;
     left:0;
     right:0;
     > *{
         position: absolute;
-        background: yellow;
+        background: $white;
+        border: 1px solid $midgrey;
     }
 }
 
@@ -74,13 +95,57 @@ form{
     left: 80px;
     margin:0;
     padding: 0.5em;
+    background-image: url(http://www.theloop.com.au/app/serve/view_file/L21udC9zaXRlX2RhdGEvcHJvZmlsZS8xMTM5NjctbC5qcGcsMTQxNDYzODU5MyxpbWFnZS9qcGc);
+    background-size: auto 80%;
+    background-position: right 10px center;
+    background-repeat: no-repeat;
 }
 
-.phone{
+.phone-frame{
+    position:relative;
     width: 740px;
     height: 800px;
     left: 80px;
     top: 200px;
+}
+
+.phone{
+    position: absolute;
+    top:0px;
+    right:0px;
+    width: 550px;
+    height: 950px;
+    background-image: url(../img/phone-handset.png);
+    background-size: auto 100%;
+    background-position: right 10px center;
+    background-repeat: no-repeat;
+    transform: scale(0.8);
+    transform-origin: 100% 0%;
+}
+
+iframe{
+    position: absolute;
+    width: 375px;
+    height: 667px;
+    top:144px;
+    right: 97px;
+    border:0;
+}
+
+.pglogo{
+    position: absolute;
+    width: 250px;
+    height:70px;
+    top: 20px;
+    left: 20px;
+}
+
+.format{
+    position: absolute;
+    width: 250px;
+    height:172px;
+    top: 90px;
+    left: 20px;
 }
 
 .hero-metric{
