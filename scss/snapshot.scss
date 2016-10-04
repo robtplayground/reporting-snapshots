@@ -41,14 +41,33 @@ body{
 
 // form
 
-legend{
+fieldset legend{
     font-weight: bold;
     font-size: 22px;
-    margin-bottom: 1em;
+    margin-bottom: 0.5em;
+    padding-top: 0.2em;
+
 }
+
+fieldset:not(:first-child) legend{
+    margin-top: 1em;
+    border-top: 1px solid $midgrey;
+}
+
 label{
     display:block;
-    margin-bottom: 0.5em;
+    margin-top: 0.8em;
+    margin-bottom: 0.2em;
+}
+
+input[type="checkbox"]{
+    display:block;
+    margin: 0.5em;
+    + label{
+        position: relative;
+        margin-top: -1.5em;
+        padding-left: 1.5em;
+    }
 }
 
 
@@ -69,7 +88,11 @@ form{
     position: absolute;
     top:0;
     left:0;
-    opacity:0.5;
+    opacity:0.8;
+    z-index: 2;
+    background: yellow;
+    transform: scale(1.5);
+    transform-origin: 0% 0%;
 }
 
 .container{
@@ -157,7 +180,7 @@ iframe{
     height: 100%;
 }
 
-.hero-metric{
+#hero-metric{
     width: 960px;
     height: 280px;
     top: 200px;
@@ -201,7 +224,7 @@ iframe{
         text-transform: uppercase;
         vertical-align: baseline;
     }
-    .benchmark{
+    .comparison{
         position: absolute;
         top: 210px;
         right: 160px;
@@ -215,21 +238,21 @@ iframe{
     }
 }
 
-.metric2{
+#metric-2{
     width: 460px;
     height: 280px;
     top: 520px;
     left: 880px;
 }
 
-.metric3{
+#metric-3{
     width: 460px;
     height: 280px;
     top: 520px;
     left: 1380px;
 }
 
-.metric2, .metric3{
+#metric-2, #metric-3{
     .icon{
         width: 120px;
         height: 120px;
@@ -270,7 +293,7 @@ iframe{
         text-transform: uppercase;
         vertical-align: baseline;
     }
-    .benchmark{
+    .comparison{
         position: absolute;
         top: 210px;
         left: 0px;
@@ -292,21 +315,21 @@ iframe{
     right: 10px;
 }
 
-.impressions{
+#impressions{
     width: 460px;
     height: 160px;
     top: 840px;
     left: 880px;
 }
 
-.clicks{
+#clicks{
     width: 460px;
     height: 160px;
     top: 840px;
     left: 1380px;
 }
 
-.impressions, .clicks{
+#impressions, #clicks{
     .icon{
         position: absolute;
         width: 140px;

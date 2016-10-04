@@ -11,20 +11,23 @@
        <form action="">
             <fieldset>
 
-                <legend>Top Header</legend>
+                <legend>Title Area</legend>
                 <label for="advertiserName">Advertiser Name</label>
                 <input type="text" id="advertiserName">
 
-                <label for="brand">Brand</label>
-                <input type="text" id="Amex Rewards">
-
-                <label for="campaignName">Campaign Name</label>
-                <input type="text" id="campaignName">
+                <label for="placementName">Placement Name</label>
+                <input type="text" id="placementName" name="placementName">
 
                 <label for="agencyLogo">Agency Logo URL</label>
-                <input type="text" name="agencyLoop">
+                <input type="text" name="agencyLogo" id="agencyLogo">
 
-                <label for="heroMetric"></label>
+            </fieldset>
+
+            <fieldset>
+
+                <legend>Hero Metric</legend>
+
+                <label for="heroMetric">Hero Metric</label>
                 <select id="heroMetric" name="heroMetric">
                     <option value="viewability">Viewability</option>
                     <option value="ctr">CTR</option>
@@ -34,7 +37,13 @@
                     <option value="timeInView">Time in View</option>
                 </select>
 
-                <label for="metric2"></label>
+                <label for="hero-comparison-text">Benchmark Text</label>
+                <input type="text" id="hero-comparison-text" name="hero-comparison-text">
+
+                <input type="checkbox" id="hero-trending" name="hero-trending">
+                <label for="hero-trending">Trending</label>
+
+                <label for="metric2">Metric 2</label>
                 <select id="metric2" name="metric2">
                     <option value="viewability">Viewability</option>
                     <option value="ctr">CTR</option>
@@ -44,7 +53,7 @@
                     <option value="timeInView">Time in View</option>
                 </select>
 
-                <label for="metric3"></label>
+                <label for="metric3">Metric 3</label>
                 <select id="metric3" name="metric3">
                     <option value="viewability">Viewability</option>
                     <option value="ctr">CTR</option>
@@ -54,27 +63,36 @@
                     <option value="timeInView">Time in View</option>
                 </select>
 
+                </fieldset>
+
+                <fieldset>
+
+                    <legend>Ad Creative</legend>
+
                 <label for="creativeId">Creative ID</label>
                 <input type="text" name="creativeId">
 
-                <label for="format">Format</label>
+                <label for="format">Format Logo</label>
                 <select name="format" id="format">
-                    <option value="superSkin">Super Skin</option>
-                    <option value="sidePush">Side Push</option>
-                    <option value="topAndTail">Top and Tail</option>
+                    <option value="super-skin">Super Skin</option>
+                    <option value="side-push">Side Push</option>
+                    <option value="top-and-tail">Top and Tail</option>
                     <option value="cinema">Cinema</option>
-                    <option value="driveBy">Drive By</option>
-                    <option value="hangTime">Hang Time</option>
+                    <option value="drive-by">Drive By</option>
+                    <option value="hang-time">Hang Time</option>
                 </select>
 
                 <label for="sites">Sites</label>
+                <p><small>Write the name of each site on a separate line</small></p>
+                <textarea name="sites" id="sites" cols="30" rows="10"></textarea>
+
 
             </fieldset>
 
        </form>
 
        <div class="container">
-            <h1 class="title">Advertiser Name &middot; Placement Name</h1>
+            <h1 class="title"><span class="advertiser">Advertiser Name</span> &middot; <span class="placement">Placement Name</span></h1>
             <div class="phone-frame">
                 <div class="pglogo">
                     <svg viewBox="0 0 610 180">
@@ -91,16 +109,16 @@
                     <iframe id="phone-preview-iframe" src="https://create.playground.xyz/kosula/1/quiet?dpframe=1&amp;demo-host=mamamia"></iframe>
                 </div>
             </div>
-            <div class="hero-metric" class="viewability">
+            <div id="hero-metric" class="viewability">
                 <div class="metric-elements">
                     <div class="icon">
                         <svg viewBox="0 0 300 300">
-                            <use xlink:href="img/metric-icons.svg#viewability" />
+                            <use xlink:href="img/metric-icons.svg#time-in-view" />
                         </svg>
                     </div>
                     <div class="metric-value">78</div>
                     <div class="metric-name">Viewability</div>
-                    <div class="benchmark">IAB Average 48%</div>
+                    <div class="comparison">IAB Average 48%</div>
                     <div class="trending">
                         <svg viewBox="0 0 300 300">
                             <use xlink:href="img/metric-icons.svg#trending" />
@@ -108,7 +126,7 @@
                     </div>
                 </div>
             </div>
-            <div class="metric2">
+            <div id="metric-2">
                 <div class="metric-elements">
                     <div class="icon">
                         <svg viewBox="0 0 300 300">
@@ -117,7 +135,7 @@
                     </div>
                     <div class="metric-value">1.8</div>
                     <div class="metric-name">Viewability</div>
-                    <div class="benchmark">IAB Average 48%</div>
+                    <div class="comparison">IAB Average 48%</div>
                     <div class="trending">
                         <svg viewBox="0 0 300 300">
                             <use xlink:href="img/metric-icons.svg#trending" />
@@ -125,7 +143,7 @@
                     </div>
                 </div>
             </div>
-            <div class="metric3">
+            <div id="metric-3">
                 <div class="metric-elements">
                     <div class="icon">
                         <svg viewBox="0 0 300 300">
@@ -134,7 +152,7 @@
                     </div>
                     <div class="metric-value">4.56</div>
                     <div class="metric-name">Viewability</div>
-                    <div class="benchmark">IAB Average 48%</div>
+                    <div class="comparison">IAB Average 48%</div>
                     <div class="trending">
                         <svg viewBox="0 0 300 300">
                             <use xlink:href="img/metric-icons.svg#trending" />
@@ -142,7 +160,7 @@
                     </div>
                 </div>
             </div>
-            <div class="impressions">
+            <div id="impressions">
                 <div class="metric-elements">
                     <div class="icon">
                         <svg viewBox="0 0 300 300">
@@ -153,7 +171,7 @@
                     <div class="metric-name">Impressions</div>
                 </div>
             </div>
-            <div class="clicks">
+            <div id="clicks">
                 <div class="metric-elements">
                     <div class="icon">
                         <svg viewBox="0 0 300 300">
@@ -173,17 +191,40 @@
 
          $(function() {
 
+             // Advertiser Name
+            $('#advertiserName').on('change',function() {
+              $('.advertiser').text( $('#advertiserName').val() );
+            });
 
-             //$('.format use').attr('xlink\:href', svgPath + 'hang-time');
+            // Placement Name
+           $('#placementName').on('change',function() {
+             $('.placement').text( $('#placementName').val() );
+           });
+
+           // Agency Logo
+
+           $('#agencyLogo').on('change',function() {
+             $('.title').css('background-image', 'url(' +  $('#agencyLogo').val() + ')' );
+           });
+
+           // Agency Logo
+
+           $('#heroMetric').on('change',function() {
+             var metric =  $('#heroMetric').val();
+             console.log(metric);
+             $('#hero-metric').attr('class', metric);
+             $('#hero-metric .icon use').attr('xlink:href', 'img/metric-icons.svg#' + metric);
+           });
+
+
 
             //  load image by ajax
 
 
 
-        //    $.getJSON('snapshot.json', function(jd) {
-        //        console.log(jd);
-           //
-        //    });
+           $.getJSON('snapshot.json', function(jd) {
+               console.log(jd.advertiserName);
+           });
 
 
 
