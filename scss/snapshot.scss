@@ -32,6 +32,7 @@ $b: 10px;
 
 html{
     font-size: $b;
+    color: $pink;
 }
 
 body{
@@ -61,7 +62,7 @@ svg{
     position: relative;
     width: 100%;
     height: 100%;
-    fill:$sp-teal;
+    fill:currentColor;
 }
 
 form{
@@ -91,10 +92,12 @@ form{
 .title{
     width:1760px;
     height: 120px;
+    line-height: 120px;
     top: 40px;
     left: 80px;
     margin:0;
-    padding: 0.5em;
+    padding-left: 1em;
+    color: $black;
     background-image: url(http://www.theloop.com.au/app/serve/view_file/L21udC9zaXRlX2RhdGEvcHJvZmlsZS8xMTM5NjctbC5qcGcsMTQxNDYzODU5MyxpbWFnZS9qcGc);
     background-size: auto 80%;
     background-position: right 10px center;
@@ -168,12 +171,13 @@ iframe{
 
     .metric-value{
         position: absolute;
-        top: 0px;
+        top: 20px;
         right: 160px;
         width: 400px;
         height:160px;
         line-height: 160px;
-        font-size: 130px;
+        color: $black;
+        font-size: 120px;
         font-weight: 700;
         text-align: center;
         &:after{
@@ -183,24 +187,31 @@ iframe{
             top: -0.5em;
         }
     }
+    .metric-name{
+        position: absolute;
+        top: 170px;
+        right: 160px;
+        line-height: 60px;
+        width: 400px;
+        height: 60px;
+        font-size: 35px;
+        font-weight: 700;
+        color: currentColor;
+        text-align: center;
+        text-transform: uppercase;
+        vertical-align: baseline;
+    }
     .benchmark{
         position: absolute;
-        bottom: 70px;
-        right: 250px;
-        line-height: 130px;
-        width: 300px;
-        height:40px;
+        top: 210px;
+        right: 160px;
+        line-height: 60px;
+        width: 400px;
+        height: 60px;
         text-align: center;
-    }
-    .metric-name{
         text-transform: uppercase;
-        position: absolute;
-        bottom: 120px;
-        right: 250px;
-        line-height: 130px;
-        width: 300px;
-        height:40px;
-        text-align: center;
+        color: $darkgrey;
+        font-size: 20px;
     }
 }
 
@@ -216,6 +227,61 @@ iframe{
     height: 280px;
     top: 520px;
     left: 1380px;
+}
+
+.metric2, .metric3{
+    .icon{
+        width: 120px;
+        height: 120px;
+        top: 20px;
+        left: 20px;
+    }
+
+    .metric-value{
+        position: absolute;
+        top: 0px;
+        left: 10px;
+        width: 460px;
+        height:160px;
+        line-height: 160px;
+        color: $black;
+        font-size: 80px;
+        font-weight: 700;
+        text-align: left;
+        padding-left: 160px;
+        &:after{
+            position: absolute;
+            content: '%';
+            font-size: 0.4em;
+            top: -0.5em;
+        }
+    }
+    .metric-name{
+        position: absolute;
+        top: 170px;
+        right: 0px;
+        line-height: 60px;
+        width: 460px;
+        height: 60px;
+        font-size: 35px;
+        font-weight: 700;
+        color: currentColor;
+        text-align: center;
+        text-transform: uppercase;
+        vertical-align: baseline;
+    }
+    .benchmark{
+        position: absolute;
+        top: 210px;
+        left: 0px;
+        line-height: 60px;
+        width: 460px;
+        height: 60px;
+        text-align: center;
+        text-transform: uppercase;
+        color: $darkgrey;
+        font-size: 20px;
+    }
 }
 
 .trending{
@@ -238,4 +304,39 @@ iframe{
     height: 160px;
     top: 840px;
     left: 1380px;
+}
+
+.impressions, .clicks{
+    .icon{
+        position: absolute;
+        width: 140px;
+        height: 140px;
+        top:10px;
+        left: 10px;
+    }
+    .metric-value{
+        position: absolute;
+        width: 300px;
+        height: 80px;
+        line-height: 80px;
+        right:0;
+        top:20px;
+        color: $black;
+        font-size: 40px;
+        font-weight: 700;
+        text-align: center;
+    }
+    .metric-name{
+        position: absolute;
+        width: 300px;
+        height: 80px;
+        line-height: 80px;
+        right:0;
+        bottom:0;
+        color: $darkgrey;
+        font-size: 20px;
+        font-weight: 400;
+        text-align: center;
+        text-transform: uppercase;
+    }
 }
