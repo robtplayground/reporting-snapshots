@@ -81,33 +81,100 @@
                         <use xlink:href="img/playground-logo.svg#playground" />
                     </svg>
                 </div>
-                <div class="format">
+                <div class="format" class="side-push">
                     <svg viewBox="0 0 640 440">
-                        <use xlink:href="img/format-logos.svg#side-push" />
+                        <use xlink:href="img/format-logos.svg#super-skin" />
                     </svg>
                 </div>
 
                 <div class="phone">
-                    <iframe id="phone-preview-iframe" width="375" height="667" src="https://create.playground.xyz/kosula/1/quiet?dpframe=1&amp;demo-host=mamamia"></iframe>
+                    <iframe id="phone-preview-iframe" src="https://create.playground.xyz/kosula/1/quiet?dpframe=1&amp;demo-host=mamamia"></iframe>
                 </div>
             </div>
-            <div class="hero-metric"></div>
-            <div class="metric2"></div>
-            <div class="metric3"></div>
-            <div class="impressions"></div>
-            <div class="clicks"></div>
-       </div>
-
-       <div class="icon">
-           <svg viewBox="0 0 300 300">
-               <use xlink:href="img/metric-icons.svg#replay-rate" />
-           </svg>
+            <div class="hero-metric" class="viewability">
+                <div class="metric-elements">
+                    <div class="icon">
+                        <svg viewBox="0 0 300 300">
+                            <use xlink:href="img/metric-icons.svg#viewability" />
+                        </svg>
+                    </div>
+                    <div class="metric-value">78</div>
+                    <div class="metric-name">Viewability</div>
+                    <div class="benchmark">IAB Average 48%</div>
+                    <div class="trending">
+                        <svg viewBox="0 0 300 300">
+                            <use xlink:href="img/metric-icons.svg#trending" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <div class="metric2">
+                <div class="metric-elements">
+                    <div class="icon">
+                        <svg viewBox="0 0 300 300">
+                            <use xlink:href="img/metric-icons.svg#viewability" />
+                        </svg>
+                    </div>
+                    <div class="metric-value">78</div>
+                    <div class="metric-name">Viewability</div>
+                    <div class="benchmark">IAB Average 48%</div>
+                    <div class="trending">
+                        <svg viewBox="0 0 300 300">
+                            <use xlink:href="img/metric-icons.svg#trending" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <div class="metric3">
+                <div class="metric-elements">
+                    <div class="icon">
+                        <svg viewBox="0 0 300 300">
+                            <use xlink:href="img/metric-icons.svg#viewability" />
+                        </svg>
+                    </div>
+                    <div class="metric-value">78</div>
+                    <div class="metric-name">Viewability</div>
+                    <div class="benchmark">IAB Average 48%</div>
+                    <div class="trending">
+                        <svg viewBox="0 0 300 300">
+                            <use xlink:href="img/metric-icons.svg#trending" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <div class="impressions">
+                <div class="metric-elements">
+                    <div class="icon">
+                        <svg viewBox="0 0 300 300">
+                            <use xlink:href="img/metric-icons.svg#impressions" />
+                        </svg>
+                    </div>
+                    <div class="metric-value">78</div>
+                    <div class="metric-name">Viewability</div>
+                </div>
+            </div>
+            <div class="clicks">
+                <div class="metric-elements">
+                    <div class="icon">
+                        <svg viewBox="0 0 300 300">
+                            <use xlink:href="img/metric-icons.svg#clicks" />
+                        </svg>
+                    </div>
+                    <div class="metric-value">78</div>
+                    <div class="metric-name">Viewability</div>
+                </div>
+            </div>
        </div>
 
 
       <script>
 
+      var svgPath = 'img/format-logos.svg#';
+
          $(function() {
+
+
+             //$('.format use').attr('xlink\:href', svgPath + 'hang-time');
 
             //  load image by ajax
 

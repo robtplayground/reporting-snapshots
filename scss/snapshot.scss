@@ -1,6 +1,6 @@
 @import '_normalize';
 
-@import 'https://fonts.googleapis.com/css?family=Ubuntu';
+@import 'https://fonts.googleapis.com/css?family=Ubuntu:400,500,700';
 
 html, body{
     font-family: 'Ubuntu', sans-serif;
@@ -35,7 +35,7 @@ html{
 }
 
 body{
-    font-size: $b*1.6;
+    font-size: 16px;
 }
 
 // form
@@ -136,16 +136,22 @@ iframe{
     position: absolute;
     width: 250px;
     height:70px;
-    top: 20px;
-    left: 20px;
+    top: 0px;
+    left: 0px;
 }
 
 .format{
     position: absolute;
-    width: 250px;
-    height:172px;
-    top: 90px;
-    left: 20px;
+    width: 230px;
+    height:155px;
+    top: 70px;
+    left: 10px;
+}
+
+.metric-elements{
+    position: absolute;
+    width: 100%;
+    height: 100%;
 }
 
 .hero-metric{
@@ -153,6 +159,49 @@ iframe{
     height: 280px;
     top: 200px;
     left: 880px;
+
+    .icon{
+        width: 200px;
+        height: 200px;
+        left: 50px;
+    }
+
+    .metric-value{
+        position: absolute;
+        top: 0px;
+        right: 160px;
+        width: 400px;
+        height:160px;
+        line-height: 160px;
+        font-size: 130px;
+        font-weight: 700;
+        text-align: center;
+        &:after{
+            position: absolute;
+            content: '%';
+            font-size: 0.4em;
+            top: -0.5em;
+        }
+    }
+    .benchmark{
+        position: absolute;
+        bottom: 70px;
+        right: 250px;
+        line-height: 130px;
+        width: 300px;
+        height:40px;
+        text-align: center;
+    }
+    .metric-name{
+        text-transform: uppercase;
+        position: absolute;
+        bottom: 120px;
+        right: 250px;
+        line-height: 130px;
+        width: 300px;
+        height:40px;
+        text-align: center;
+    }
 }
 
 .metric2{
@@ -167,6 +216,14 @@ iframe{
     height: 280px;
     top: 520px;
     left: 1380px;
+}
+
+.trending{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: 10px;
+    right: 10px;
 }
 
 .impressions{
