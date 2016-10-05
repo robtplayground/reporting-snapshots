@@ -4,7 +4,9 @@ $(function() {
 
     // Load saved file
 
-    $.getJSON('snapshot.json', function(data) {
+    var jsonFile;
+
+    $.getJSON(jsonFile, function(data) {
         jsonData = data;
         updateSnapshot();
     });
@@ -15,8 +17,9 @@ $(function() {
         $('#placement').text(jsonData['placement-name']);
         $('#title').css('background-image', "url(" + jsonData['agency-logo'] + ")");
         //format logo
-        $('#format').attr('class', jsonData['format']);
-        $('#format use').attr('xlink:href', 'img/format-logos.svg#' + jsonData['format'])
+        var formatClass = makeClassName(jsonData['format']);
+        $('#format').attr('class', formatClass);
+        $('#format use').attr('xlink:href', 'img/format-logos.svg#' + formatClass)
 
         //sites
 
@@ -70,9 +73,6 @@ $(function() {
         updateSnapshot();
     });
 
-
-
     //  load image by ajax
-
 
 });
