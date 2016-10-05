@@ -12,77 +12,14 @@
         <fieldset>
 
             <legend>Title Area</legend>
-            <label for="advertiserName">Advertiser Name</label>
-            <input type="text" id="advertiserName">
+            <label for="advertiser-name-input">Advertiser Name</label>
+            <input type="text" id="advertiser-name-input">
 
-            <label for="placementName">Placement Name</label>
-            <input type="text" id="placementName" name="placementName">
+            <label for="placement-name-input">Placement Name</label>
+            <input type="text" id="placement-name-input" name="placement-name-input">
 
-            <label for="agencyLogo">Agency Logo URL</label>
-            <input type="text" name="agencyLogo" id="agencyLogo">
-
-        </fieldset>
-
-        <fieldset>
-
-            <legend>Hero Metric</legend>
-
-            <select id="heroMetric" name="heroMetric">
-                <option value="viewability">Viewability</option>
-                <option value="ctr">CTR</option>
-                <option value="engagement-rate">Engagement Rate</option>
-                <option value="replay-rate">Replay Rate
-                </option>
-                <option value="time-in-view">Time in View</option>
-            </select>
-
-            <label for="hero-comparison-text">Benchmark Text</label>
-            <input type="text" id="hero-comparison-text" name="hero-comparison-text">
-
-            <input type="checkbox" id="hero-trending" name="hero-trending">
-            <label for="hero-trending">Trending</label>
-
-          </fieldset>
-
-          <fieldset>
-            <legend>Metric 2</legend>
-            <select id="metric2" name="metric2">
-                <option value="viewability">Viewability</option>
-                <option value="ctr">CTR</option>
-                <option value="engagement-rate">Engagement Rate</option>
-                <option value="replay-rate">Replay Rate
-                </option>
-                <option value="time-in-view">Time in View</option>
-            </select>
-
-            <label for="metric2-comparison-text">Benchmark Text</label>
-            <input type="text" id="metric2-comparison-text" name="metric2-comparison-text">
-
-            <input type="checkbox" id="metric2-trending" name="metric2-trending">
-            <label for="metric2-trending">Trending</label>
-
-            </fieldset>
-
-            <fieldset>
-
-            <legend>Metric 3</legend>
-            <select id="metric3" name="metric3">
-                <option value="viewability">Viewability</option>
-                <option value="ctr">CTR</option>
-                <option value="engagement-rate">Engagement Rate</option>
-                <option value="replay-rate">Replay Rate
-                </option>
-                <option value="time-in-view">Time in View</option>
-            </select>
-
-            <label for="metric3-value">Value</label>
-            <input type="text" id="metric3-value" name="metric3-value" step=".01" maxlength="5" style="width: 5em">
-
-            <label for="metric3-comparison-text">Benchmark Text</label>
-            <input type="text" id="metric3-comparison-text" name="metric3-comparison-text">
-
-            <input type="checkbox" id="metric3-trending" name="metric3-trending">
-            <label for="metric3-trending">Trending</label>
+            <label for="agency-logo-input">Agency Logo URL</label>
+            <input type="text" name="agency-logo-input" id="agency-logo-input">
 
         </fieldset>
 
@@ -90,11 +27,11 @@
 
             <legend>Ad Creative</legend>
 
-            <label for="creativeId">Creative ID</label>
-            <input type="text" name="creativeId">
+            <label for="creative-id-input">Creative ID</label>
+            <input type="text" name="creative-id-input">
 
-            <label for="format">Format Logo</label>
-            <select name="format" id="format">
+            <label for="format-input">Format Logo</label>
+            <select name="format-input" id="format-input">
                 <option value="super-skin">Super Skin</option>
                 <option value="side-push">Side Push</option>
                 <option value="top-and-tail">Top and Tail</option>
@@ -103,31 +40,114 @@
                 <option value="hang-time">Hang Time</option>
             </select>
 
-            <label for="sites">Sites</label>
+            <label for="sites-input">Sites</label>
             <p><small>Write the name of each site on a separate line</small></p>
-            <textarea name="sites" id="sites" cols="30" rows="10"></textarea>
+            <textarea name="sites-input" id="sites-input" cols="30" rows="10"></textarea>
 
+
+        </fieldset>
+
+        <fieldset>
+
+            <legend>Hero Metric</legend>
+
+            <select id="hero-metric-input" name="hero-metric-input">
+                <option value="viewability">Viewability</option>
+                <option value="ctr">CTR</option>
+                <option value="engagement-rate">Engagement Rate</option>
+                <option value="replay-rate">Replay Rate
+                </option>
+                <option value="time-in-view">Time in View</option>
+            </select>
+
+            <label for="hero-value-input">Value</label>
+            <input type="text" id="hero-value-input" name="hero-value-input" step=".01" maxlength="5" style="width: 5em"><span class="unit">%</span>
+
+            <label for="hero-comparison-text-input">Benchmark Text</label>
+            <input type="text" id="hero-comparison-text-input" name="hero-comparison-text-input">
+
+            <input type="checkbox" id="hero-trending-input" name="hero-trending-input">
+            <label for="hero-trending-input">Trending</label>
+
+        </fieldset>
+
+        <fieldset>
+            <legend>Metric 2</legend>
+            <select id="metric2-input" name="metric2-input">
+                <option value="viewability">Viewability</option>
+                <option value="ctr">CTR</option>
+                <option value="engagement-rate">Engagement Rate</option>
+                <option value="replay-rate">Replay Rate
+                </option>
+                <option value="time-in-view">Time in View</option>
+            </select>
+
+            <label for="metric2-value-input">Value</label>
+            <input type="text" id="metric2-value-input" name="metric2-value-input" step=".01" maxlength="5" style="width: 5em"><span class="unit">%</span>
+
+            <label for="metric2-comparison-text-input">Benchmark Text</label>
+            <input type="text" id="metric2-comparison-text-input" name="metric2-comparison-text-input">
+
+            <input type="checkbox" id="metric2-trending-input" name="metric2-trending-input">
+            <label for="metric2-trending-input">Trending</label>
+
+        </fieldset>
+
+        <fieldset>
+
+            <legend>Metric 3</legend>
+            <select id="metric3-input" name="metric3-input">
+                <option value="viewability">Viewability</option>
+                <option value="ctr">CTR</option>
+                <option value="engagement-rate">Engagement Rate</option>
+                <option value="replay-rate">Replay Rate
+                </option>
+                <option value="time-in-view">Time in View</option>
+            </select>
+
+            <label for="metric3-value-input">Value</label>
+            <input type="text" id="metric3-value-input" name="metric3-value-input" step=".01" maxlength="5" style="width: 5em"><span class="unit">%</span>
+
+            <label for="metric3-comparison-text-input">Benchmark Text</label>
+            <input type="text" id="metric3-comparison-text-input" name="metric3-comparison-text-input">
+
+            <input type="checkbox" id="metric3-trending-input" name="metric3-trending-input">
+            <label for="metric3-trending-input">Trending</label>
+
+        </fieldset>
+
+        <fieldset>
+            <legend>Impressions and Clicks</legend>
+            <label for="impressions-value-input">Impressions Value</label>
+            <input type="text" id="impressions-value-input" name="impressions-value-input" step=".01" maxlength="5" style="width: 5em">
+
+            <label for="clicks-value-input">Clicks Value</label>
+            <input type="text" id="clicks-value-input" name="clicks-value-input" step=".01" maxlength="5" style="width: 5em">
 
         </fieldset>
 
     </form>
 
     <div class="container">
-        <h1 class="title"><span class="advertiser">Advertiser Name</span> &middot; <span class="placement">Placement Name</span></h1>
-        <div class="phone-frame">
+        <h1 id="title"><span id="advertiser">Advertiser Name</span> &middot; <span id="placement">Placement Name</span></h1>
+        <div id="phone-frame">
             <div class="pglogo">
                 <svg viewBox="0 0 610 180">
                     <use xlink:href="img/playground-logo.svg#playground" />
                 </svg>
             </div>
-            <div class="format" class="side-push">
+            <div id="format" class="side-push">
                 <svg viewBox="0 0 640 440">
                     <use xlink:href="img/format-logos.svg#super-skin" />
                 </svg>
             </div>
 
-            <div class="phone">
-                <iframe id="phone-preview-iframe" src="https://create.playground.xyz/kosula/1/quiet?dpframe=1&amp;demo-host=mamamia"></iframe>
+            <div id="sites">
+
+            </div>
+
+            <div id="phone">
+                <iframe id="phone-preview-iframe" src="https://create.playground.xyz/kosula/1/quiet?dpframe=1&demo-host=mamamia"></iframe>
             </div>
         </div>
         <div id="hero-metric" class="viewability">
@@ -137,8 +157,8 @@
                         <use xlink:href="img/metric-icons.svg#time-in-view" />
                     </svg>
                 </div>
-                <div class="metric-value">78</div>
-                <div class="metric-name">Viewability</div>
+                <div class="value">78</div>
+                <div class="name">Viewability</div>
                 <div class="comparison">IAB Average 48%</div>
                 <div class="trending">
                     <svg viewBox="0 0 300 300">
@@ -147,15 +167,15 @@
                 </div>
             </div>
         </div>
-        <div id="metric-2">
+        <div id="metric2">
             <div class="metric-elements">
                 <div class="icon">
                     <svg viewBox="0 0 300 300">
                         <use xlink:href="img/metric-icons.svg#replay-rate" />
                     </svg>
                 </div>
-                <div class="metric-value">1.8</div>
-                <div class="metric-name">Viewability</div>
+                <div class="value">1.8</div>
+                <div class="name">Viewability</div>
                 <div class="comparison">IAB Average 48%</div>
                 <div class="trending">
                     <svg viewBox="0 0 300 300">
@@ -164,15 +184,15 @@
                 </div>
             </div>
         </div>
-        <div id="metric-3">
+        <div id="metric3">
             <div class="metric-elements">
                 <div class="icon">
                     <svg viewBox="0 0 300 300">
                         <use xlink:href="img/metric-icons.svg#time-in-view" />
                     </svg>
                 </div>
-                <div class="metric-value">4.56</div>
-                <div class="metric-name">Viewability</div>
+                <div class="value">4.56</div>
+                <div class="name">Viewability</div>
                 <div class="comparison">IAB Average 48%</div>
                 <div class="trending">
                     <svg viewBox="0 0 300 300">
@@ -188,8 +208,8 @@
                         <use xlink:href="img/metric-icons.svg#impressions" />
                     </svg>
                 </div>
-                <div class="metric-value">500K</div>
-                <div class="metric-name">Impressions</div>
+                <div class="value">500K</div>
+                <div class="name">Impressions</div>
             </div>
         </div>
         <div id="clicks">
@@ -199,53 +219,99 @@
                         <use xlink:href="img/metric-icons.svg#clicks" />
                     </svg>
                 </div>
-                <div class="metric-value">437</div>
-                <div class="metric-name">Clicks</div>
+                <div class="value">437</div>
+                <div class="name">Clicks</div>
             </div>
         </div>
     </div>
 
 
     <script>
-
         $(function() {
+
+            var jsonData;
 
             // Load saved file
 
-            $.getJSON('snapshot.json', function(jd) {
-                console.log(jd.advertiserName);
+            $.getJSON('snapshot.json', function(data) {
+                jsonData = data;
+                updateSnapshot();
             });
+
+            function updateSnapshot() {
+                //title
+                $('#advertiser').text(jsonData['advertiser-name']);
+                $('#placement').text(jsonData['placement-name']);
+                $('#title').css('background-image', "url(" + jsonData['agency-logo'] + ")");
+                //format logo
+                $('#format').attr('class', jsonData['format']);
+                $('#format use').attr('xlink:href', 'img/format-logos.svg#' + jsonData['format'])
+
+                //sites
+
+                var sites  = jsonData['sites'];
+                var siteList = $('<ul/>');
+                $.each(sites, function(i){
+                    var li = $('<li>' + sites[i] + '</li>').appendTo(siteList);
+                });
+                $('#sites').html(siteList);
+                //set metrics
+                setMetric('hero-metric');
+                setMetric('metric2');
+                setMetric('metric3');
+
+                // set impressions and clicks
+                $('#impressions .value').text(jsonData['impressions-value']);
+                $('#clicks .value').text(jsonData['clicks-value']);
+            };
+
+            function setMetric(targetMetric){
+                var metricName = jsonData[targetMetric];
+                var metricValue = jsonData[targetMetric + '-value'];
+                var metricClass = makeClassName(metricName);
+                var metricComparison = jsonData[targetMetric + '-comparison'];
+                var metricTrending = jsonData[targetMetric + '-trending'] === true ?  'block':'none';
+
+                // console.log(metricComparison);
+
+                $('#' + targetMetric + ' .icon use').attr('xlink:href', 'img/metric-icons.svg#' + metricClass);
+                $('#' + targetMetric).attr('class', metricClass);
+                $('#' + targetMetric + ' .value').text(metricValue);
+                $('#' + targetMetric + ' .name').text(metricName);
+                $('#' + targetMetric + ' .comparison').text(metricComparison);
+                $('#' + targetMetric + ' .trending').css('display', metricTrending);
+            }
+
+            function makeClassName(Text) {
+                return Text
+                .toLowerCase()
+                .replace(/ /g, '-')
+                .replace(/[^\w-]+/g, '');
+            }
 
             // add values to snapshot
 
 
-
-
-
-
-            // form behaviour
-
-
             // Advertiser Name
-            $('#advertiserName').on('change', function() {
-                $('.advertiser').text($('#advertiserName').val());
+            $('#advertiser-name-input').on('change', function() {
+                $('.advertiser').text($('#advertiser-name-input').val());
             });
 
             // Placement Name
-            $('#placementName').on('change', function() {
-                $('.placement').text($('#placementName').val());
+            $('#placement-name-input').on('change', function() {
+                $('.placement').text($('#placement-name-input').val());
             });
 
             // Agency Logo
 
-            $('#agencyLogo').on('change', function() {
-                $('.title').css('background-image', 'url(' + $('#agencyLogo').val() + ')');
+            $('#agency-logo-input').on('change', function() {
+                $('.title').css('background-image', 'url(' + $('#agency-logo-input').val() + ')');
             });
 
             // Agency Logo
 
-            $('#heroMetric').on('change', function() {
-                var metric = $('#heroMetric').val();
+            $('#hero-metric-input').on('change', function() {
+                var metric = $('#hero-metric-input').val();
                 console.log(metric);
                 $('#hero-metric').attr('class', metric);
                 $('#hero-metric .icon use').attr('xlink:href', 'img/metric-icons.svg#' + metric);
