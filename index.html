@@ -8,126 +8,11 @@
 
 <body>
 
-    <form action="">
-        <fieldset>
+    <form autocomplete="off">
 
-            <legend>Title Area</legend>
-            <label for="advertiser-name-input">Advertiser Name</label>
-            <input type="text" id="advertiser-name-input">
-
-            <label for="placement-name-input">Placement Name</label>
-            <input type="text" id="placement-name-input" name="placement-name-input">
-
-            <label for="agency-logo-input">Agency Logo URL</label>
-            <input type="text" name="agency-logo-input" id="agency-logo-input">
-
-        </fieldset>
-
-        <fieldset>
-
-            <legend>Ad Creative</legend>
-
-            <label for="creative-id-input">Creative ID</label>
-            <input type="text" name="creative-id-input">
-
-            <label for="format-input">Format Logo</label>
-            <select name="format-input" id="format-input">
-                <option value="super-skin">Super Skin</option>
-                <option value="side-push">Side Push</option>
-                <option value="top-and-tail">Top and Tail</option>
-                <option value="cinema">Cinema</option>
-                <option value="drive-by">Drive By</option>
-                <option value="hang-time">Hang Time</option>
-            </select>
-
-            <label for="sites-input">Sites</label>
-            <p><small>Write the name of each site on a separate line</small></p>
-            <textarea name="sites-input" id="sites-input" cols="30" rows="10"></textarea>
-
-
-        </fieldset>
-
-        <fieldset>
-
-            <legend>Hero Metric</legend>
-
-            <select id="hero-metric-input" name="hero-metric-input">
-                <option value="viewability">Viewability</option>
-                <option value="ctr">CTR</option>
-                <option value="engagement-rate">Engagement Rate</option>
-                <option value="replay-rate">Replay Rate
-                </option>
-                <option value="time-in-view">Time in View</option>
-            </select>
-
-            <label for="hero-value-input">Value</label>
-            <input type="text" id="hero-value-input" name="hero-value-input" step=".01" maxlength="5" style="width: 5em"><span class="unit"></span>
-
-            <label for="hero-comparison-text-input">Benchmark Text</label>
-            <input type="text" id="hero-comparison-text-input" name="hero-comparison-text-input">
-
-            <input type="checkbox" id="hero-trending-input" name="hero-trending-input">
-            <label for="hero-trending-input">Trending</label>
-
-        </fieldset>
-
-        <fieldset>
-            <legend>Metric 2</legend>
-            <select id="metric2-input" name="metric2-input">
-                <option value="viewability">Viewability</option>
-                <option value="ctr">CTR</option>
-                <option value="engagement-rate">Engagement Rate</option>
-                <option value="replay-rate">Replay Rate
-                </option>
-                <option value="time-in-view">Time in View</option>
-            </select>
-
-            <label for="metric2-value-input">Value</label>
-            <input type="text" id="metric2-value-input" name="metric2-value-input" step=".01" maxlength="5" style="width: 5em"><span class="unit"></span>
-
-            <label for="metric2-comparison-text-input">Benchmark Text</label>
-            <input type="text" id="metric2-comparison-text-input" name="metric2-comparison-text-input">
-
-            <input type="checkbox" id="metric2-trending-input" name="metric2-trending-input">
-            <label for="metric2-trending-input">Trending</label>
-
-        </fieldset>
-
-        <fieldset>
-
-            <legend>Metric 3</legend>
-            <select id="metric3-input" name="metric3-input">
-                <option value="viewability">Viewability</option>
-                <option value="ctr">CTR</option>
-                <option value="engagement-rate">Engagement Rate</option>
-                <option value="replay-rate">Replay Rate
-                </option>
-                <option value="time-in-view">Time in View</option>
-            </select>
-
-            <label for="metric3-value-input">Value</label>
-            <input type="text" id="metric3-value-input" name="metric3-value-input" step=".01" maxlength="5" style="width: 5em"><span class="unit"></span>
-
-            <label for="metric3-comparison-text-input">Benchmark Text</label>
-            <input type="text" id="metric3-comparison-text-input" name="metric3-comparison-text-input">
-
-            <input type="checkbox" id="metric3-trending-input" name="metric3-trending-input">
-            <label for="metric3-trending-input">Trending</label>
-
-        </fieldset>
-
-        <fieldset>
-            <legend>Impressions and Clicks</legend>
-            <label for="impressions-value-input">Impressions Value</label>
-            <input type="text" id="impressions-value-input" name="impressions-value-input" step=".01" maxlength="5" style="width: 5em">
-
-            <label for="clicks-value-input">Clicks Value</label>
-            <input type="text" id="clicks-value-input" name="clicks-value-input" step=".01" maxlength="5" style="width: 5em">
-
-        </fieldset>
-
+        <input type="file" id="file-input" value="" />
+        <label for="file-input">+</label>
     </form>
-
     <div class="container">
         <h1 id="title"><span id="advertiser">Advertiser Name</span> &middot; <span id="placement">Placement Name</span></h1>
         <div id="phone-frame">
@@ -150,48 +35,48 @@
                 <iframe id="phone-preview-iframe" src="https://create.playground.xyz/kosula/1/quiet?dpframe=1&demo-host=mamamia"></iframe>
             </div>
         </div>
-        <div id="hero-metric" class="viewability">
-            <div class="metric-elements">
-                <div class="icon">
-                    <svg viewBox="0 0 300 300">
-                        <use xlink:href="img/metric-icons.svg#viewability" />
-                    </svg>
-                </div>
-                <div class="value">78<span class="unit"></span></div>
-                <div class="name">Viewability</div>
-                <div class="comparison">IAB Average 48%</div>
-                <div class="trending">
-                    <svg viewBox="0 0 300 300">
-                        <use xlink:href="img/metric-icons.svg#trending" />
-                    </svg>
-                </div>
-            </div>
-        </div>
-        <div id="metric2">
-            <div class="metric-elements">
-                <div class="icon">
-                    <svg viewBox="0 0 300 300">
-                        <use xlink:href="img/metric-icons.svg#replay-rate" />
-                    </svg>
-                </div>
-                <div class="value">1.8<span class="unit"></span></div>
-                <div class="name">Viewability</div>
-                <div class="comparison">IAB Average 48%</div>
-                <div class="trending">
-                    <svg viewBox="0 0 300 300">
-                        <use xlink:href="img/metric-icons.svg#trending" />
-                    </svg>
-                </div>
-            </div>
-        </div>
-        <div id="metric3">
+        <div id="hero-metric" class="time-in-view">
             <div class="metric-elements">
                 <div class="icon">
                     <svg viewBox="0 0 300 300">
                         <use xlink:href="img/metric-icons.svg#time-in-view" />
                     </svg>
                 </div>
-                <div class="value">4.56<span class="unit"></span></div>
+                <div class="value">6.75</div>
+                <div class="name">Time in View</div>
+                <div class="comparison">IAB Average 2s</div>
+                <div class="trending">
+                    <svg viewBox="0 0 300 300">
+                        <use xlink:href="img/metric-icons.svg#trending" />
+                    </svg>
+                </div>
+            </div>
+        </div>
+        <div id="metric2" class="viewability">
+            <div class="metric-elements">
+                <div class="icon">
+                    <svg viewBox="0 0 300 300">
+                        <use xlink:href="img/metric-icons.svg#viewability" />
+                    </svg>
+                </div>
+                <div class="value">1.8</div>
+                <div class="name">Viewability</div>
+                <div class="comparison">IAB Average 48%</div>
+                <div class="trending">
+                    <svg viewBox="0 0 300 300">
+                        <use xlink:href="img/metric-icons.svg#trending" />
+                    </svg>
+                </div>
+            </div>
+        </div>
+        <div id="metric3" class="replay-rate">
+            <div class="metric-elements">
+                <div class="icon">
+                    <svg viewBox="0 0 300 300">
+                        <use xlink:href="img/metric-icons.svg#time-in-view" />
+                    </svg>
+                </div>
+                <div class="value">4.56</div>
                 <div class="name">Viewability</div>
                 <div class="comparison">IAB Average 48%</div>
                 <div class="trending">
@@ -203,22 +88,22 @@
         </div>
         <div id="impressions">
             <div class="metric-elements">
-                <div class="icon">
+                <!-- <div class="icon">
                     <svg viewBox="0 0 300 300">
                         <use xlink:href="img/metric-icons.svg#impressions" />
                     </svg>
-                </div>
+                </div> -->
                 <div class="value">500K</div>
                 <div class="name">Impressions</div>
             </div>
         </div>
         <div id="clicks">
             <div class="metric-elements">
-                <div class="icon">
+                <!-- <div class="icon">
                     <svg viewBox="0 0 300 300">
                         <use xlink:href="img/metric-icons.svg#clicks" />
                     </svg>
-                </div>
+                </div> -->
                 <div class="value">437</div>
                 <div class="name">Clicks</div>
             </div>

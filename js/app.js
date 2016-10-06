@@ -2,14 +2,41 @@ $(function() {
 
     var jsonData;
 
-    // Load saved file
+    // resets file input
 
-    var jsonFile;
-
-    $.getJSON(jsonFile, function(data) {
-        jsonData = data;
-        updateSnapshot();
+    $('#file-input').click(function(){
+        this.value = "";
     });
+
+    function readSingleFile(e) {
+        var file = e.target.files[0];
+        if (!file) {
+            return;
+        }
+        var reader = new FileReader();
+        reader.onload = function(e) {
+            jsonData = JSON.parse(e.target.result);
+
+            console.log(jsonData);
+            updateSnapshot();
+            // displayContents(jsonData);
+        };
+        reader.readAsText(file);
+    }
+
+    // function displayContents(contents) {
+    //     var element = document.getElementById('file-content');
+    //     element.innerHTML = contents;
+    // }
+
+    document.getElementById('file-input')
+        .addEventListener('change', readSingleFile, false);
+
+
+    // $.getJSON(jsonFile, function(data) {
+    //     jsonData = data;
+    //
+    // });
 
     function updateSnapshot() {
         //title
@@ -23,9 +50,9 @@ $(function() {
 
         //sites
 
-        var sites  = jsonData['sites'];
+        var sites = jsonData['sites'];
         var siteList = $('<ul/>');
-        $.each(sites, function(i){
+        $.each(sites, function(i) {
             var li = $('<li>' + sites[i] + '</li>').appendTo(siteList);
         });
         $('#sites').html(siteList);
@@ -37,14 +64,23 @@ $(function() {
         // set impressions and clicks
         $('#impressions .value').text(jsonData['impressions-value']);
         $('#clicks .value').text(jsonData['clicks-value']);
+
+        // icon color
+
+        $('.icon svg').css('fill', jsonData['icon-color']);
+
+        // iframe preview
+
+        $('iframe').attr('src', ('http://create.playground.xyz/' + jsonData['creative-id']));
+
     };
 
-    function setMetric(targetMetric){
+    function setMetric(targetMetric) {
         var metricName = jsonData[targetMetric];
         var metricValue = jsonData[targetMetric + '-value'];
         var metricClass = makeClassName(metricName);
         var metricComparison = jsonData[targetMetric + '-comparison'];
-        var metricTrending = jsonData[targetMetric + '-trending'] === true ?  'block':'none';
+        var metricTrending = jsonData[targetMetric + '-trending'] === true ? 'block' : 'none';
 
         // console.log(metricComparison);
 
@@ -59,20 +95,17 @@ $(function() {
 
     function makeClassName(Text) {
         return Text
-        .toLowerCase()
-        .replace(/ /g, '-')
-        .replace(/[^\w-]+/g, '');
+            .toLowerCase()
+            .replace(/ /g, '-')
+            .replace(/[^\w-]+/g, '');
     }
 
-    // Advertiser Name
-    var updater = 1;
-    $('input, select').on('change', function() {
-      updater++;
-      console.log('Updating');
-        jsonData['hero-metric-value'] = updater;
-        updateSnapshot();
-    });
-
-    //  load image by ajax
+    // var updater = 1;
+    // $('input, select').on('change', function() {
+    //     updater++;
+    //     console.log('Updating');
+    //     jsonData['hero-metric-value'] = updater;
+    //     updateSnapshot();
+    // });
 
 });
