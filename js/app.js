@@ -2,11 +2,91 @@ $(function() {
 
     var jsonData;
 
+
+
+    // show form
+
+    $('.form-toggle').click(function(){
+        $('form').toggleClass('active');
+
+        var text = $('.form-toggle').text();
+        $('.form-toggle').text(
+        text == "+" ? "-" : "+");
+
+    });
+
+    // hide form
+
+
+    // when field in form is updated, write to object and updateSnapshot
+
+
+
+    // Upload old config
+
+    // Download current config
+
+    // //this will remove the blank-spaces from the title and replace it with an underscore
+    // var fileName = $('#filename-input').val().replace(/ /g,"_");
+    //
+    // var uri = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(jsonData));
+    //
+    // // Now the little tricky part.
+    // // you can use either>> window.open(uri);
+    // // but this will not work in some browsers
+    // // or you will not get the correct file extension
+    //
+    // //this trick will generate a temp <a /> tag
+    // var link = document.createElement("a");
+    // link.href = uri;
+    //
+    // //set the visibility hidden so it will not effect on your web-layout
+    // link.style = "visibility:hidden";
+    // link.download = fileName + ".json";
+    //
+    // //this part will append the anchor tag and remove it after automatic click
+    // document.body.appendChild(link);
+    // link.click();
+    // document.body.removeChild(link);
+
+
+    // setup sample config
+
+    var jsonData;
+
+    $.getJSON('sampleConfig.json', function(data) {
+        jsonData = data;
+        fillForm();
+        updateSnapshot();
+    });
+
+
+
+    function fillForm(){
+
+        // fill out all fields
+
+        
+
+        // site list
+        var sites = jsonData['sites'];
+        var siteList = "";
+        $.each(sites, function(i) {
+            siteList += (sites[i] + '\n');
+        });
+        $('#sites-input').val(siteList);
+    }
+
+
+
+
     // resets file input
 
     $('#file-input').click(function() {
         this.value = "";
     });
+
+    // read File into JSON
 
     function readSingleFile(e) {
         var file = e.target.files[0];
@@ -17,7 +97,6 @@ $(function() {
         reader.onload = function(e) {
             jsonData = JSON.parse(e.target.result);
 
-            console.log(jsonData);
             updateSnapshot();
             // displayContents(jsonData);
         };
@@ -29,14 +108,9 @@ $(function() {
     //     element.innerHTML = contents;
     // }
 
-    document.getElementById('file-input')
+    document.getElementById('load-file')
         .addEventListener('change', readSingleFile, false);
 
-
-    // $.getJSON(jsonFile, function(data) {
-    //     jsonData = data;
-    //
-    // });
 
     function updateSnapshot() {
         //title
@@ -71,7 +145,7 @@ $(function() {
 
         // iframe preview
 
-        $('iframe').attr('src', ('http://create.playground.xyz/' + jsonData['creative-id']));
+        $('iframe').attr('src', ('http://create.playground.xyz/' + jsonData['creative-id'] + '/quiet??dpframe=1&demo-host='  + jsonData['demo-host'] + '&page-type=' + jsonData['page-type']));
 
     };
 
@@ -99,6 +173,12 @@ $(function() {
             .replace(/ /g, '-')
             .replace(/[^\w-]+/g, '');
     }
+
+    // populate form
+
+
+
+
 
     // var updater = 1;
     // $('input, select').on('change', function() {

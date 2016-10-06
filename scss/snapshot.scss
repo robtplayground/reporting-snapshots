@@ -47,67 +47,71 @@ form{
     transform: scale(1.5);
     transform-origin: 0% 0%;
     padding-bottom: 2em;
-    overflow: hidden;
-    width: 200px;
-    transform: translateX(-80px);
+    width:350px;
+    background: transparent;
+    transform: translateX(-300px);
     transition: transform 0.2s ease;
-    &:hover{
+    &.active{
+        transform: translateX(0px);
+    }
+    .form-toggle{
+        display:block;
+        position: absolute;
+        top:0;
+        right:0;
+        width: 50px;
+        height: 50px;
+        font-size: 40px;
+        line-height: 50px;
+        color: white;
+        text-align: center;
+        background: $pink;
+        transition: transform 0.2s ease;
+        transform: translateX(-50px);
+    }
+    &:hover .form-toggle{
         transform: translateX(0px);
     }
 }
 
 input[type="file"]{
-    display: none;
-
-    + label{
-        display: block;
-        width: 60px;
-        height: 60px;
-        background: $midgrey;
-        font-size: 50px;
-        line-height: 60px;
-        color: $darkgrey;
-        text-align: center;
-        &:hover{
-            background: $pink;
-            color: white;
-        }
-    }
 }
 
 
-// fieldset{
-//     padding: 1em;
-// }
-//
-// fieldset legend{
-//     font-weight: bold;
-//     font-size: 22px;
-//     margin-bottom: 0.5em;
-//     padding-top: 0.2em;
-//
-// }
-//
-// fieldset:not(:first-child) legend{
-//     margin-top: 1em;
-//     border-top: 1px solid $midgrey;
-// }
-//
-// label{
-//     display:block;
-//     margin-top: 0.8em;
-//     margin-bottom: 0.2em;
-// }
-//
-// input[type="checkbox"]{
-//     display:block;
-//     margin: 0.5em;
-//     + label{
-//         position: relative;
-//         margin-top: -1.5em;
-//         padding-left: 1.5em;
-//     }
-// }
+fieldset{
+    width: 300px;
+    padding: 1em;
+    background: $pink;
+}
+
+fieldset legend{
+    font-weight: bold;
+    font-size: 22px;
+    margin-bottom: 0.5em;
+    padding-top: 0.2em;
+
+}
+
+fieldset:not(:first-child) legend{
+    margin-top: 1em;
+    border-top: 1px solid $midgrey;
+}
+
+label{
+    display:block;
+    margin-top: 0.8em;
+    margin-bottom: 0.2em;
+}
+
+input[type="checkbox"]{
+    display:block;
+    margin: 0.5em;
+    + label{
+        position: relative;
+        margin-top: -1.5em;
+        padding-left: 1.5em;
+    }
+}
 
 .icon{
     position: relative;
