@@ -1,6 +1,6 @@
 @import '_normalize';
 
-@import 'https://fonts.googleapis.com/css?family=Ubuntu:400,500,700';
+// @import 'https://fonts.googleapis.com/css?family=Ubuntu:400,500,700';
 
 html, body{
     font-family: 'Ubuntu', sans-serif;
@@ -48,6 +48,8 @@ form{
     transform-origin: 0% 0%;
     padding-bottom: 2em;
     width:350px;
+    height: 100%;
+    overflow-y: scroll;
     background: transparent;
     transform: translateX(-300px);
     transition: transform 0.2s ease;
@@ -255,7 +257,7 @@ iframe{
         text-transform: uppercase;
         vertical-align: baseline;
     }
-    .comparison{
+    .benchmark{
         position: absolute;
         top: 210px;
         right: 160px;
@@ -318,7 +320,7 @@ iframe{
         text-transform: uppercase;
         vertical-align: baseline;
     }
-    .comparison{
+    .benchmark{
         position: absolute;
         top: 210px;
         left: 0px;

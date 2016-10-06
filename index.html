@@ -8,7 +8,7 @@
 
 <body>
 
-    <form>
+    <form class="active">
 
         <div class="form-toggle">+</div>
 
@@ -36,7 +36,7 @@
 
            <label for="creative-id-input">Creative ID and Version</label>
            <p><small>eg gagaga/1</small></p>
-           <input type="text" name="creative-id-input">
+           <input type="text" name="creative-id-input" id="creative-id-input">
 
            <label for="demo-publisher-input" >Demo Publisher</label>
            <select name="demo-publisher-input" id="demo-publisher-input">
@@ -63,8 +63,8 @@
                <option value="homepage">Home Page</option>
            </select>
 
-           <label for="format-input">Format Logo</label>
-           <select name="format-input" id="format-input">
+           <label for="format-logo-input">Format Logo</label>
+           <select name="format-logo-input" id="format-logo-input">
                <option value="super-skin">Super Skin</option>
                <option value="side-push">Side Push</option>
                <option value="top-and-tail">Top and Tail</option>
@@ -85,41 +85,40 @@
            <legend>Hero Metric</legend>
 
            <select id="hero-metric-input" name="hero-metric-input">
-               <option value="viewability">Viewability</option>
-               <option value="ctr">CTR</option>
-               <option value="engagement-rate">Engagement Rate</option>
-               <option value="replay-rate">Replay Rate
-               </option>
-               <option value="time-in-view">Time in View</option>
+               <option value="Viewability">Viewability</option>
+               <option value="CTR">CTR</option>
+               <option value="Engagement Rate">Engagement Rate</option>
+               <option value="Replay Rate">Replay Rate</option>
+               <option value="Time in View">Time in View</option>
            </select>
 
-           <label for="hero-value-input">Value</label>
-           <input type="text" id="hero-value-input" name="hero-value-input" step=".01" maxlength="5" style="width: 5em"><span class="unit"></span>
+           <label for="hero-metric-value-input">Value</label>
+           <input type="text" id="hero-metric-value-input" name="hero-metric-value-input" step=".01" maxlength="5" style="width: 5em"><span class="unit"></span>
 
-           <label for="hero-comparison-text-input">Benchmark Text</label>
-           <input type="text" id="hero-comparison-text-input" name="hero-comparison-text-input">
+           <label for="hero-metric-benchmark-input">Benchmark Text</label>
+           <input type="text" id="hero-metric-benchmark-input" name="hero-metric-benchmark-input">
 
-           <input type="checkbox" id="hero-trending-input" name="hero-trending-input">
-           <label for="hero-trending-input">Trending</label>
+           <input type="checkbox" id="hero-metric-trending-input" name="hero-metric-trending-input">
+           <label for="hero-metric-trending-input">Trending</label>
 
        </fieldset>
 
        <fieldset>
            <legend>Metric 2</legend>
            <select id="metric2-input" name="metric2-input">
-               <option value="viewability">Viewability</option>
-               <option value="ctr">CTR</option>
-               <option value="engagement-rate">Engagement Rate</option>
-               <option value="replay-rate">Replay Rate
-               </option>
-               <option value="time-in-view">Time in View</option>
+             <option value="Viewability">Viewability</option>
+             <option value="CTR">CTR</option>
+             <option value="Engagement Rate">Engagement Rate</option>
+             <option value="Replay Rate">Replay Rate
+             </option>
+             <option value="Time in View">Time in View</option>
            </select>
 
            <label for="metric2-value-input">Value</label>
            <input type="text" id="metric2-value-input" name="metric2-value-input" step=".01" maxlength="5" style="width: 5em"><span class="unit"></span>
 
-           <label for="metric2-comparison-text-input">Benchmark Text</label>
-           <input type="text" id="metric2-comparison-text-input" name="metric2-comparison-text-input">
+           <label for="metric2-benchmark-input">Benchmark Text</label>
+           <input type="text" id="metric2-benchmark-input" name="metric2-benchmark-input">
 
            <input type="checkbox" id="metric2-trending-input" name="metric2-trending-input">
            <label for="metric2-trending-input">Trending</label>
@@ -130,19 +129,19 @@
 
            <legend>Metric 3</legend>
            <select id="metric3-input" name="metric3-input">
-               <option value="viewability">Viewability</option>
-               <option value="ctr">CTR</option>
-               <option value="engagement-rate">Engagement Rate</option>
-               <option value="replay-rate">Replay Rate
-               </option>
-               <option value="time-in-view">Time in View</option>
+             <option value="Viewability">Viewability</option>
+             <option value="CTR">CTR</option>
+             <option value="Engagement Rate">Engagement Rate</option>
+             <option value="Replay Rate">Replay Rate
+             </option>
+             <option value="Time in View">Time in View</option>
            </select>
 
            <label for="metric3-value-input">Value</label>
            <input type="text" id="metric3-value-input" name="metric3-value-input" step=".01" maxlength="5" style="width: 5em"><span class="unit"></span>
 
-           <label for="metric3-comparison-text-input">Benchmark Text</label>
-           <input type="text" id="metric3-comparison-text-input" name="metric3-comparison-text-input">
+           <label for="metric3-benchmark-input">Benchmark Text</label>
+           <input type="text" id="metric3-benchmark-input" name="metric3-benchmark-input">
 
            <input type="checkbox" id="metric3-trending-input" name="metric3-trending-input">
            <label for="metric3-trending-input">Trending</label>
@@ -192,7 +191,7 @@
                 </div>
                 <div class="value">6.75</div>
                 <div class="name">Time in View</div>
-                <div class="comparison">IAB Average 2s</div>
+                <div class="benchmark">IAB Average 2s</div>
                 <div class="trending">
                     <svg viewBox="0 0 300 300">
                         <use xlink:href="img/metric-icons.svg#trending" />
@@ -209,7 +208,7 @@
                 </div>
                 <div class="value">1.8</div>
                 <div class="name">Viewability</div>
-                <div class="comparison">IAB Average 48%</div>
+                <div class="benchmark">IAB Average 48%</div>
                 <div class="trending">
                     <svg viewBox="0 0 300 300">
                         <use xlink:href="img/metric-icons.svg#trending" />
@@ -226,7 +225,7 @@
                 </div>
                 <div class="value">4.56</div>
                 <div class="name">Viewability</div>
-                <div class="comparison">IAB Average 48%</div>
+                <div class="benchmark">IAB Average 48%</div>
                 <div class="trending">
                     <svg viewBox="0 0 300 300">
                         <use xlink:href="img/metric-icons.svg#trending" />
@@ -258,7 +257,7 @@
         </div>
     </div>
 
-    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <script src="js/jquery-2.2.3.min.js" crossorigin="anonymous"></script>
     <script src="js/app.js"></script>
 
 </body>

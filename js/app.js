@@ -66,7 +66,13 @@ $(function() {
 
         // fill out all fields
 
-        
+        Object.keys(jsonData).forEach(function(field) {
+            $('#' + field + '-input').val(jsonData[field]);
+        });
+
+        // check checkboxes
+
+        $('input[type=checkbox][value="true"]').prop('checked', true);
 
         // site list
         var sites = jsonData['sites'];
