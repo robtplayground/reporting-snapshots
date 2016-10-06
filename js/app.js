@@ -83,8 +83,11 @@ $(function() {
         $('#sites-input').val(siteList);
     }
 
+    // change form
 
-
+      $('input, select').on('change', function(){
+        
+      });
 
     // resets file input
 
