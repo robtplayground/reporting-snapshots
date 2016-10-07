@@ -6,12 +6,26 @@ $(function() {
 
     // show form
 
-    $('.form-toggle').click(function(){
-        $('form').toggleClass('active');
+    var formActive = Cookies.get('formActive');
 
-        var text = $('.form-toggle').text();
-        $('.form-toggle').text(
-        text == "+" ? "-" : "+");
+    if(formActive){
+        $('#form-container').attr('class', 'active');
+        $('#form-toggle').text('-');
+    }
+
+    $('#form-toggle').click(function() {
+        formActive = Cookies.get('formActive');
+        console.log(formActive);
+        if( formActive === 'true'){
+            console.log('yep');
+            $('#form-container').attr('class', '');
+            Cookies.set('formActive', false);
+            $('#form-toggle').text('+');
+        }else{
+            $('#form-container').attr('class', 'active');
+            Cookies.set('formActive', true);
+            $('#form-toggle').text('-');
+        }
 
     });
 
@@ -62,7 +76,7 @@ $(function() {
 
 
 
-    function fillForm(){
+    function fillForm() {
 
         // fill out all fields
 
@@ -83,11 +97,34 @@ $(function() {
         $('#sites-input').val(siteList);
     }
 
-    // change form
+    // update JSON data and Save button
 
-      $('input, select').on('change', function(){
-        
-      });
+    $('input, select').on('change', function() {
+        var newValue = ($(this).val());
+        var jsonKey = $(this).attr('id').replace('-input', '');
+        jsonData[jsonKey] = newValue;
+
+        updateSaveButton();
+        updateSnapshot();
+
+    });
+
+    $('textarea').on('change', function() {
+        var newValue = ($(this).val());
+        var jsonKey = $(this).attr('id').replace('-input', '');
+        jsonData[jsonKey] = newValue.split("\n");
+
+        updateSaveButton();
+        updateSnapshot();
+
+    });
+
+    function updateSaveButton(){
+        var file = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(jsonData));
+        console.log(file);
+
+        $('.save-button').attr('href', file);
+    }
 
     // resets file input
 
@@ -154,7 +191,7 @@ $(function() {
 
         // iframe preview
 
-        $('iframe').attr('src', ('http://create.playground.xyz/' + jsonData['creative-id'] + '/quiet??dpframe=1&demo-host='  + jsonData['demo-host'] + '&page-type=' + jsonData['page-type']));
+        $('iframe').attr('src', ('http://create.playground.xyz/' + jsonData['creative-id'] + '/quiet?dpframe=1&demo-host=' + jsonData['demo-host'] + '&page-type=' + jsonData['page-type']));
 
     };
 
@@ -162,16 +199,16 @@ $(function() {
         var metricName = jsonData[targetMetric];
         var metricValue = jsonData[targetMetric + '-value'];
         var metricClass = makeClassName(metricName);
-        var metricComparison = jsonData[targetMetric + '-comparison'];
+        var metricBenchmark = jsonData[targetMetric + '-benchmark'];
         var metricTrending = jsonData[targetMetric + '-trending'] === true ? 'block' : 'none';
 
-        // console.log(metricComparison);
+        // console.log(metricBenchmark);
 
         $('#' + targetMetric + ' .icon use').attr('xlink:href', 'img/metric-icons.svg#' + metricClass);
         $('#' + targetMetric).attr('class', metricClass);
         $('#' + targetMetric + ' .value').text(metricValue);
         $('#' + targetMetric + ' .name').text(metricName);
-        $('#' + targetMetric + ' .comparison').text(metricComparison);
+        $('#' + targetMetric + ' .benchmark').text(metricBenchmark);
         $('#' + targetMetric + ' .trending').css('display', metricTrending);
 
     }
