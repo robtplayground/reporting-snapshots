@@ -13,14 +13,15 @@
         <form>
 
             <fieldset>
-                <legend>Open Previous File</legend>
+                <h2>Open Previous File</h2>
                 <input type="file" id="load-file">
+                <label for="load-file">Choose file</label>
 
             </fieldset>
 
             <fieldset>
 
-                <legend>Title Area</legend>
+                <h2>Title Area</h2>
                 <label for="advertiser-name-input">Advertiser Name</label>
                 <input type="text" id="advertiser-name-input">
 
@@ -34,7 +35,7 @@
 
             <fieldset>
 
-                <legend>Ad Creative</legend>
+                <h2>Ad Creative</h2>
 
                 <label for="creative-id-input">Creative ID and Version</label>
                 <p><small>eg gagaga/1</small></p>
@@ -79,12 +80,17 @@
                 <p><small>Write the name of each site on a separate line do oe hweohwdjkle</small></p>
                 <textarea name="sites-input" id="sites-input" cols="25" rows="20"></textarea>
 
+            </fieldset>
 
+            <fieldset>
+                <h2>Colors</h2>
+                <label for="incon-color">Select a color for icons</label>
+                <input type="color" id="icon-color" name="icon-color" value="#ff9900" />
             </fieldset>
 
             <fieldset>
 
-                <legend>Hero Metric</legend>
+                <h2>Hero Metric</h2>
 
                 <select id="hero-metric-input" name="hero-metric-input">
                <option value="Viewability">Viewability</option>
@@ -106,7 +112,7 @@
             </fieldset>
 
             <fieldset>
-                <legend>Metric 2</legend>
+                <h2>Metric 2</h2>
                 <select id="metric2-input" name="metric2-input">
              <option value="Viewability">Viewability</option>
              <option value="CTR">CTR</option>
@@ -129,7 +135,7 @@
 
             <fieldset>
 
-                <legend>Metric 3</legend>
+                <h2>Metric 3</h2>
                 <select id="metric3-input" name="metric3-input">
              <option value="Viewability">Viewability</option>
              <option value="CTR">CTR</option>
@@ -151,7 +157,7 @@
             </fieldset>
 
             <fieldset>
-                <legend>Impressions and Clicks</legend>
+                <h2>Impressions and Clicks</h2>
                 <label for="impressions-value-input">Impressions Value</label>
                 <input type="text" id="impressions-value-input" name="impressions-value-input" step=".01" maxlength="5" style="width: 5em">
 
@@ -161,6 +167,7 @@
             </fieldset>
 
             <fieldset>
+                <h2>Save Snapshot</h2>
                 <a class="save-button" href="data:uri=" download="Placement-Snapshot.json">Save Snapshot</a>
             </fieldset>
 

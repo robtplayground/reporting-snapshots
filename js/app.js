@@ -15,15 +15,13 @@ $(function() {
 
     $('#form-toggle').click(function() {
         formActive = Cookies.get('formActive');
-        console.log(formActive);
         if( formActive === 'true'){
-            console.log('yep');
             $('#form-container').attr('class', '');
-            Cookies.set('formActive', false);
+            Cookies.set('formActive', 'false');
             $('#form-toggle').text('+');
         }else{
             $('#form-container').attr('class', 'active');
-            Cookies.set('formActive', true);
+            Cookies.set('formActive', 'true');
             $('#form-toggle').text('-');
         }
 
